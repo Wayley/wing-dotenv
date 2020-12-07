@@ -1,0 +1,41 @@
+{
+  "name": "wing-dotenv",
+  "version": "0.0.1",
+  "description": "a tool for dotenv in the command line",
+  "main": "dist/wing-dotenv.es.js",
+  "bin": {
+    "wing-dotenv": "dist/wing-dotenv.es.js"
+  },
+  "module": "dist/wing-dotenv.es.js",
+  "unpkg": "dist/wing-dotenv.js",
+  "files": [
+    "dist",
+    "lib",
+    "es"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wayley/wing-dotenv.git"
+  },
+  "keywords": [
+    "postmessage",
+    "window"
+  ],
+  "author": {
+    "name": "Robben Wayley",
+    "email": "hb_wangzheng@163.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wayley/wing-dotenv/issues"
+  },
+  "homepage": "https://github.com/Wayley/wing-dotenv#readme",
+  "devDependencies": {
+    "rollup": "^2.34.2",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}
