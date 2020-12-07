@@ -1,6 +1,6 @@
 {
   "name": "wing-dotenv",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "a tool for dotenv in the command line",
   "main": "dist/wing-dotenv.es.js",
   "bin": {

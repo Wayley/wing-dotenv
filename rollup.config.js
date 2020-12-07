@@ -1,6 +1,6 @@
 import { terser } from 'rollup-plugin-terser';
 export default {
-  input: 'src/index.js',
+  input: 'src/wing-dotenv.js',
   output: [
     {
       file: 'dist/wing-dotenv.js',
