@@ -1,14 +1,11 @@
 #!/usr/bin/env node
 
 const program = require('commander');
-const path = require('path');
-
 const { version } = require('../package.json');
-let argv = require('minimist')(process.argv.slice(2));
-
 program.version(version);
-
 program.option('-e, --env', 'load the environment file');
+
+const argv = require('minimist')(process.argv.slice(2));
 let envPaths = [];
 if (argv.e) {
   if (typeof argv.e === 'string') {
@@ -21,10 +18,16 @@ if (argv.e) {
 }
 
 const dotenv = require('dotenv');
+const path = require('path');
 const variableExpansion = require('dotenv-expand');
-
 envPaths.forEach(function (env) {
   variableExpansion(dotenv.config({ path: path.resolve(env) }));
 });
 
-program.parse(process.argv);
+const spawn = require('cross-spawn');
+spawn(argv._[0], argv._.slice(1), { stdio: 'inherit' }).on(
+  'exit',
+  function (code) {
+    process.exit(code);
+  }
+);

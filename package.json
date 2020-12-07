@@ -1,6 +1,6 @@
 {
   "name": "wing-dotenv",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "a tool for dotenv in the command line",
   "main": "dist/wing-dotenv.es.js",
   "bin": {
@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "commander": "^6.2.0",
+    "cross-spawn": "^7.0.3",
     "dotenv": "^8.2.0",
     "dotenv-expand": "^5.1.0",
     "minimist": "^1.2.5"
